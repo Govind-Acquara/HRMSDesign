@@ -84,12 +84,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">State Master</h2>
+                            <h2 class="content-header-title float-left mb-0">User Permission</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="HRMS_Index.html">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="../Dashboard/HRMS_Index.html">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Master
+                                    <li class="breadcrumb-item active">Roles
                                     </li>
                                 </ol>
                             </div>
@@ -103,7 +103,7 @@
                 
                     <div class="card">
                         <div class="card-header pb-1">
-                            <h5 class="card-basic">Add State Name</h5>
+                            <h5 class="card-basic">Add User Permission</h5>
                             <!-- <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a> -->
                             <div class="heading-elements">
                                 <ul class="list-inline mb-0">
@@ -115,53 +115,39 @@
                             <div class="card-body pt-0 pb-0">
                                 <form class="form-horizontal" novalidate>
                                     <div class="row">
-                                        <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="col-12 col-sm-6 col-lg-6">
                                             <div class="form-group">
                                                 <div class="controls">
-                                            <label>State Id</label>
-                                            <input type="text" name="text" class="form-control" placeholder="State ID">
+                                                    <label>Employee Name</label>
+                                                    <fieldset class="form-group">
+                                                        <select class="form-control" id="users-list-status">
+                                                            <option value="">Select Employee Name</option>
+                                                            <option value="Active">ABC</option>
+                                                            <option value="Blocked">XYZ</option>
+                                                            
+                                                        </select>
+                                                    </fieldset>
+                                               </div>
                                         </div>
-                                    </div>
                                         </div>
-                                        <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="col-12 col-sm-6 col-lg-6">
                                             <div class="form-group">
                                                 <div class="controls">
-                                            <label>State Name</label>
-                                            <input type="text"  class="form-control"  placeholder="State Name" required data-validation-required-message="This State Name field is required">
-                                        </div>
-                                    </div>
-                                        </div>
-
-                                        <div class="col-12 col-sm-6 col-lg-3">
-                                            <div class="form-group">
-                                                <div class="controls">
-                                            <label>State Code</label>
-                                            <input type="text"  class="form-control"  placeholder="State Code" required data-validation-required-message="This State Code field is required">
-                                        </div>
-                                    </div>
-                                        </div>
-
-                                        <div class="col-12 col-sm-6 col-lg-3">
-                                            <div class="form-group">
-                                                <div class="controls">
-                                            <label>Country Name</label>
+                                            <label>Permission</label>
                                             <fieldset class="form-group">
                                                 <select class="form-control" id="users-list-status">
-                                                    <option value="">Select Country Name</option>
-                                                    <option value="Active">IND</option>
-                                                    <option value="Blocked">UAE</option>
-                                                    <option value="deactivated">USA</option>
+                                                    <option value="">Select Permission</option>
+                                                    <option value="Active">HR Management</option>
+                                                    <option value="Blocked">Employee Management</option>
+                                                    
                                                 </select>
                                             </fieldset>
+                                            </div>
+                                         </div>
                                         </div>
+
+                                        
                                     </div>
-                                        </div>
-
-
-                                    
-
-                                   
-                                    
                                     <div class="col-12 d-flex flex-sm-row flex-column justify-content-end pr-0">
                                         <button type="submit" class="btn btn-primary glow  mr-1 mt-0.5 mb-1">Submit</button>
                                         <button type="reset" class="btn btn-outline-dark mb-1 mt-0.5">Reset</button>
@@ -170,152 +156,132 @@
                             </div>
                         </div>
                     </div>
-                    </div>
                     <div class="card">
                         <div class="card-content">
                               <div class="card-body card-dashboard">
 
                                   <div class="table-responsive">
                                       <table class="table border-secondary table-striped dataex-html5-selectors">
-                                          <thead>
-                                              <tr>
-                                                <th>State Id</th>
-                                                <th>State Name</th>
-                                                <th>State Code</th>
-                                                <th>Country Code</th>
-                                                <th>IsActive</th>
+                                        <thead>
+                                            <tr>
+                                                <th>Sr No.</th>
+                                                <th>Employee Name</th>
+                                                <th>Permission</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
+                                                <td>ABC</td>
+                                                <td>HR Management</td>
+                                                <td>
+                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch100">
+                                                        
+                                                        <label class="custom-control-label" for="customSwitch100">
+                                                        
+                                                        <span class="switch-text-left">Active</span>
+                                                        
+                                                        <span class="switch-text-right">InActive</span>
+                                                        
+                                                        </label>
+                                                        
+                                                        </div>
+
+                                                </td>
                                                 <td >
                                                     <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
                                                     <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                 <td>2</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
+                                                <td>2</td>
+                                                <td>XYZ</td>
+                                                <td>Employee Management</td>
+                                                <td>
+                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch100">
+                                                        
+                                                        <label class="custom-control-label" for="customSwitch100">
+                                                        
+                                                        <span class="switch-text-left">Active</span>
+                                                        
+                                                        <span class="switch-text-right">InActive</span>
+                                                        
+                                                        </label>
+                                                        
+                                                        </div>
+                                                    
+
+                                                </td>
                                                 <td >
                                                     <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
                                                     <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                 <td>3</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
+                                                <td>3</td>
+                                                <td>ABC</td>
+                                                <td>Salary Management</td>
+                                                <td>
+                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch100">
+                                                        
+                                                        <label class="custom-control-label" for="customSwitch100">
+                                                        
+                                                        <span class="switch-text-left">Active</span>
+                                                        
+                                                        <span class="switch-text-right">InActive</span>
+                                                        
+                                                        </label>
+                                                        
+                                                        </div>
+
+
+                                                </td>
                                                 <td >
                                                     <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
                                                     <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                 <td>4</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
+                                                <td>4</td>
+                                                <td>ABC</td>
+                                                <td>HR Management</td>
+                                                <td>
+                                                    <div class="custom-control custom-switch switch-lg custom-switch-success mr-2 mb-1">
+
+                                                        <input type="checkbox" class="custom-control-input" id="customSwitch100">
+                                                        
+                                                        <label class="custom-control-label" for="customSwitch100">
+                                                        
+                                                        <span class="switch-text-left">Active</span>
+                                                        
+                                                        <span class="switch-text-right">InActive</span>
+                                                        
+                                                        </label>
+                                                        
+                                                        </div>
+
+                                                </td>
                                                 <td >
                                                     <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
                                                     <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                 <td>5</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                 <td>6</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                 <td>9</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                 <td>10</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                 <td>11</td>
-                                                <td>Haryana</td>
-                                                <td>HR</td>
-                                                <td>IND</td>
-                                                <td>Yes</td>
-                                                <td >
-                                                    <span class="action-edit"><a href="#" class="feather icon-edit"></a></span>
-                                                    <span class="action-delete"><a href="#" class="feather icon-trash pl-2"></a></span>
-                                                </td>
-                                            </tr>
+                                            
                                            
                                         </tbody>
                                       </table>
                                   </div>
                               </div>
                           </div>
-                    </div>
+                      </div>
                    
               
 
@@ -372,7 +338,7 @@
     <!-- BEGIN: Page JS-->
     <script src="../../app-assets/js/scripts/datatables/datatable.js"></script>
     <script src="../../app-assets/js/scripts/pages/app-user.js"></script>
-    <script src="../../app-assets/js/scripts/forms/validation/form-validation.js"></script
+    <script src="../../app-assets/js/scripts/forms/validation/form-validation.js"></script>
     <!-- END: Page JS-->
 
 </body>
